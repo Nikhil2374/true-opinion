@@ -50,7 +50,7 @@ export default function Signup(){
                 <input className='form-input' type="password" placeholder="Enter your password" onChange={(e) => setPwd(e.target.value)} />
             </div>
             <div className="input">
-                <label>Confir,</label>
+                <label>Confirm Password</label>
                 <input className='form-input' type="password" placeholder="Confirm your password" onChange={(e) => setCpwd(e.target.value)} />
             </div>
             {err && <p className="err mb-1">{err}</p>}
