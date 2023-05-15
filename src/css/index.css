@@ -55,7 +55,7 @@ label.btn{
   align-items: center;
 }
 .modal-content{
-  background-color: #fff;
+  background-color: #0006;
   width: 100%;
   max-width: 400px;
   max-height: 90vh;
@@ -68,8 +68,10 @@ label.btn{
 .modal-content.preview{
   max-width: 600px;
 }
-.modal-content.preview .survey-container{
+.modal-content.preview{
   margin-bottom: 0;
+}
+.survey-container{
   background-color: transparent;
 }
 @keyframes pop{
@@ -89,7 +91,9 @@ label.btn{
   color: var(--clr-red);
   cursor: pointer;
 }
-
+.close{
+  font-size: 3em;
+}
 
 .heading{
   font-size: 2.5em;
