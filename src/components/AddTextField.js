@@ -21,11 +21,11 @@ function AddTextField({inputType, add, close}){
     return (
         <div>
             <div className="input">
-                <label>Enter field title</label>
+                <label className='text-white'>Enter field title</label>
                 <input type="text" placeholder={`Eg. Enter your ${inputType === "Textfield" ? "Username" : inputType === "Description" ? "information" : "age"}`} onChange={e => setTitle(e.target.value)} />
             </div>
             <div className="input inline">
-                <label>Required: </label>
+                <label className='text-white'>Required: </label>
                 <input type="checkbox" onChange={() => setRequired(!required)} />
             </div>
             {err && <p className="err mb-1">{err}</p>}

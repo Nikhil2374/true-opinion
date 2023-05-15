@@ -91,9 +91,6 @@ label.btn{
   color: var(--clr-red);
   cursor: pointer;
 }
-.close{
-  font-size: 3em;
-}
 
 .heading{
   font-size: 2.5em;

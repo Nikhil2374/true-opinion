@@ -36,7 +36,7 @@ function AddMultiOptionField({ inputType, add, close }){
     return (
         <div>
             <div className="input">
-                <label>Enter field title</label>
+                <label className='text-white'>Enter field title</label>
                 <input type="text" placeholder={`Eg. Select your ${inputType === "Multiplechoice-MCQ" ? "skills" : "gender"}`} onChange={e => setTitle(e.target.value)} />
             </div>
             { options.length > 0 && (
@@ -45,7 +45,7 @@ function AddMultiOptionField({ inputType, add, close }){
                     { options.map((opt, index) => (
                         <div className="input inline mb-0" key={index}>
                             <input type={inputType === "Singlechoice-MCQ" ? "radio" : "checkbox"} className="mr-1" name="inputs" />
-                            <label>{opt}</label>
+                            <label className='text-white'>{opt}</label>
                         </div>
                     )) }
                 </div>
@@ -56,7 +56,7 @@ function AddMultiOptionField({ inputType, add, close }){
                 <button class="btn" onClick={addOption}>Add Option</button>
             </div>
             <div className="input inline">
-                <label>Required: </label>
+                <label className='text-white'>Required: </label>
                 <input type="checkbox" onChange={() => setRequired(!required)} />
             </div>
             {err && <p className="err mb-1">{err}</p>}

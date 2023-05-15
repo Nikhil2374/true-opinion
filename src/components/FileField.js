@@ -36,7 +36,7 @@ function FileField({ fieldModel, onCompleted }){
 
     return (
         <div className="input">
-            <label>{fieldModel.title}{fieldModel.required && <span className="err">*</span>}</label>
+            <label className='text-white'>{fieldModel.title}{fieldModel.required && <span className="err">*</span>}</label>
             <div className="file-field">
                 <input type="file" className="file" id={fieldModel.title.replace(" ", "")} onChange={handleFile} />
                 <label className="btn" htmlFor={fieldModel.title.replace(" ", "")}>choose file</label>
