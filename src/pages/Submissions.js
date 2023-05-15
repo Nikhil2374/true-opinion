@@ -30,7 +30,7 @@ function Submissions(){
 
     return (
         <div>
-            <h1 className="heading mb-1">Form Submissions</h1>
+            <h1 className="heading mb-1">Survey Responses</h1>
             { loading ? <p className="text-center mt-1"><span className="spinner"></span></p>
             : msg ? <h3 className="msg mt-1">{msg}</h3>
             : submissions.length > 0 ? (
