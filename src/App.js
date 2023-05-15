@@ -1,6 +1,6 @@
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes ,
   Route
 } from "react-router-dom"
 
@@ -22,7 +22,7 @@ function App() {
         <Router>
           <Navbar />
           <div className="container main">
-            <Switch>
+            <Routes>
               <Route exact path="/" component={Home} />
               <Route path="/create" component={Create} />
               <Route path="/login" component={Login} />
@@ -30,7 +30,7 @@ function App() {
               <Route path="/forms" component={Forms} />
               <Route path="/fill/:id" component={Fill} />
               <Route path="/submissions/:id" component={Submissions} />
-            </Switch>
+            </Routes>
           </div>
         </Router>
         <Footer />

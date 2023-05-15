@@ -1,25 +1,25 @@
 import { useEffect } from "react"
-import { Link, useLocation, useHistory } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 
 import { useAuthenticated, logout } from "../db"
 
 function Navbar(){
     const user = useAuthenticated()
     const location = useLocation()
-    const history = useHistory()
+    const navigate = useNavigate()
 
     useEffect(() => {
         if(user){
             localStorage.setItem("gfc-user", JSON.stringify(user))
             if(location.pathname === "/signup" || location.pathname === "/login"){
-                history.push("/")
+                navigate("/")
             }
         }else{
             if(location.pathname === "/create" || location.pathname === "/forms" || location.pathname.slice(0, 12) === "/submissions"){
-                history.push("/login")
+                navigate("/login")
             }
         }
-    }, [user, location, history])
+    }, [user, location, navigate])
 
 
     return (

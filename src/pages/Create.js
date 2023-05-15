@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import AddFieldModal from "../components/AddFieldModal"
 import RenderPlainForm from "../components/RenderPlainForm"
@@ -14,7 +14,7 @@ function Create(){
     const [err, setErr] = useState("")
     const [loading, setLoading] = useState(false)
 
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const openAddModal = inputType => {
         setShowAddModal(true)
@@ -58,7 +58,7 @@ function Create(){
         try{
             await saveForm(formModel)
             setLoading(false)
-            history.push("/forms")
+            navigate("/forms")
         }catch(e){
             setErr(e.message)
             setLoading(false)
