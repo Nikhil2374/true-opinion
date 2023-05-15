@@ -21,7 +21,7 @@ function FormCard({ form, onDelete }){
     return (
         <div className="card">
             <h2 className="title mb-1">
-                <span>{form.title}</span>
+                <span className='text-white'>{form.title}</span>
                 <span className="card-date">{getDateFromMillis(form.createdAt)}</span>
             </h2>
             <a href={`${window.location.origin}/fill/${form.id}`} rel="noreferrer" className="link mb-1" target="_blank">{`${window.location.origin}/fill/${form.id}`}</a>
