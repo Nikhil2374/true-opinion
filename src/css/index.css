@@ -1,5 +1,5 @@
 :root{
-  --primary-color: #8700f5;
+  --primary-color: #0d6efd;
   --clr-red: #ee0014;
   background-image: url(../assets/bg.jpg);
   background-size: cover;
@@ -93,7 +93,7 @@ label.btn{
 
 .heading{
   font-size: 2.5em;
-  color: white;
+  color: white !important;
 }
 
 
