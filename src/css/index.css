@@ -51,7 +51,7 @@ label.btn{
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
 }
 .modal-content{
@@ -138,7 +138,7 @@ label.btn{
 .home-box{
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   background-color: white;
   padding: 10px;
@@ -337,7 +337,7 @@ input.file{
   padding-bottom: max(1.5em, 2vw);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: end;
+  align-items:end;
   box-shadow: -1px 3px 13px 0px #ffffff;
 }
 .footer .title{
