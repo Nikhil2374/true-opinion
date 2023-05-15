@@ -37,14 +37,14 @@ function AddMultiOptionField({ inputType, add, close }){
         <div>
             <div className="input">
                 <label>Enter field title</label>
-                <input type="text" placeholder={`Eg. Select your ${inputType === "multioption-multianswer" ? "skills" : "gender"}`} onChange={e => setTitle(e.target.value)} />
+                <input type="text" placeholder={`Eg. Select your ${inputType === "Multiplechoice-MCQ" ? "skills" : "gender"}`} onChange={e => setTitle(e.target.value)} />
             </div>
             { options.length > 0 && (
                 <div className="mb-1">
                     <p className="b">Options</p>
                     { options.map((opt, index) => (
                         <div className="input inline mb-0" key={index}>
-                            <input type={inputType === "multioption-singleanswer" ? "radio" : "checkbox"} className="mr-1" name="inputs" />
+                            <input type={inputType === "Singlechoice-MCQ" ? "radio" : "checkbox"} className="mr-1" name="inputs" />
                             <label>{opt}</label>
                         </div>
                     )) }

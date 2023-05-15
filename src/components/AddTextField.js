@@ -22,7 +22,7 @@ function AddTextField({inputType, add, close}){
         <div>
             <div className="input">
                 <label>Enter field title</label>
-                <input type="text" placeholder={`Eg. Enter your ${inputType === "short-text" ? "Username" : inputType === "long-text" ? "information" : "age"}`} onChange={e => setTitle(e.target.value)} />
+                <input type="text" placeholder={`Eg. Enter your ${inputType === "Textfield" ? "Username" : inputType === "Description" ? "information" : "age"}`} onChange={e => setTitle(e.target.value)} />
             </div>
             <div className="input inline">
                 <label>Required: </label>

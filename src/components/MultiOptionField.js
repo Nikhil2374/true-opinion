@@ -7,7 +7,7 @@ function MultiOptionField({fieldModel, onSelected }){
 
     const addOption = opt => {
         let _selected = [...selected]
-        if(fieldModel.type === "multioption-multianswer"){
+        if(fieldModel.type === "Multiplechoice-MCQ"){
             arrayToggle(_selected, opt)
         }else{
             _selected = [opt]
@@ -21,7 +21,7 @@ function MultiOptionField({fieldModel, onSelected }){
             <label>{fieldModel.title}{fieldModel.required && <span className="err">*</span>}</label>
             {fieldModel.options.map((option, index) => (
                 <div className="input inline" key={index}>
-                    <input type={fieldModel.type === "multioption-multianswer" ? "checkbox" : "radio"}  className="mr-1" name={fieldModel.title.replace(" ", "")} onChange={() => addOption(option)} />
+                    <input type={fieldModel.type === "Multiplechoice-MCQ" ? "checkbox" : "radio"}  className="mr-1" name={fieldModel.title.replace(" ", "")} onChange={() => addOption(option)} />
                     <label>{option}</label>
                 </div>
             ))}
