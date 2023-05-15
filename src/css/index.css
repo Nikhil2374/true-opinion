@@ -103,9 +103,6 @@ label.btn{
 }
 .container.main{
   padding: 3vw var(--container-px);
-  display: flex;
-  justify-content: center; 
-  align-items: center;
   min-height: 100vh;
 }
 
