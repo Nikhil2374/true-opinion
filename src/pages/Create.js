@@ -27,7 +27,7 @@ function Create(){
         fields: [
             {
                 title: "Enter your email",
-                type: "short-text",
+                type: "Textfield",
                 required: true
             }
         ],
@@ -41,7 +41,7 @@ function Create(){
         setFormModel(_model)
     }
 
-    const inputTypes = ["short-text", "long-text", "number", "multioption-singleanswer", "multioption-multianswer", "file"]
+    const inputTypes = ["Textfield", "Description", "number", "Singlechoice-MCQ", "Multiplechoice-MCQ", "file"]
 
     const createForm = async () => {
         if(loading) return
@@ -93,7 +93,7 @@ function Create(){
                 <button className="btn" onClick={createForm}>{ loading ? <span className="spinner white"></span> : <span>Add</span>}</button>
             </p>
             
-            <div className="add-field-container grey-container">
+            <div className="add-field-container">
                 <p>Add new field</p>
                 { inputTypes.map((inputType, index) => <button className="btn" key={index} onClick={() => openAddModal(inputType)}>{inputType.replace("-", " ")}</button>)}
             </div>
