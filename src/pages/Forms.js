@@ -30,7 +30,7 @@ export default function Forms(){
 
     return (
         <div>
-            <h1 className="heading">My Forms</h1>
+            <h1 className="heading">My Surveys</h1>
             {
                 loading ? <p className="text-center mt-1"><span className="spinner"></span></p>
                 : msg ? <h3 className="msg mt-1">{msg}</h3> 
@@ -40,7 +40,7 @@ export default function Forms(){
                             forms.map(form => (
                                 <FormCard key={form.id} form={form} onDelete={onFormDelete} />
                             ))
-                        ) : <h3 className="msg mt-1">You haven't created any forms yet</h3> }
+                        ) : <h3 className="msg mt-1">You haven't created any Survey form yet</h3> }
                     </div>
                 )
             }
