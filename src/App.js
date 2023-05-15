@@ -21,19 +21,20 @@ export default function App() {
     <div className="App">
         <Router>
           <Navbar />
+          <div className="container main">
             <Routes>
-              <Route exact path="/" component={Home} />
-              <Route path="/create" component={Create} />
-              <Route path="/login" component={Login} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/forms" component={Forms} />
-              <Route path="/fill/:id" component={Fill} />
-              <Route path="/submissions/:id" component={Submissions} />
+              <Route exact path="/" element={<Home/>} />
+              <Route path="/create" element={<Create/>} />
+              <Route path="/login" element={<Login/>} />
+              <Route path="/signup" element={<Signup/>} />
+              <Route path="/forms" element={<Forms/>} />
+              <Route path="/fill/:id" element={<Fill/>} />
+              <Route path="/submissions/:id" element={<Submissions/>} />
             </Routes>
-          
+          </div>
         </Router>
         <Footer />
     </div>
-  );
+  )
 }
-//<div className="container main"></div>
+
