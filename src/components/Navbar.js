@@ -28,7 +28,7 @@ function Navbar(){
             <nav className="nav">
                 { user ? (
                     <span>
-                        <Link to="/forms">My Surveys</Link>
+                        <Link to="/forms">Available Surveys</Link>
                         <Link to="/create">Create Survey</Link>
                         <span onClick={logout}>Logout</span>
                     </span>
