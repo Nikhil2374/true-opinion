@@ -16,12 +16,11 @@ import Forms from "./pages/Forms"
 import Fill from "./pages/Fill"
 import Submissions from "./pages/Submissions"
 
-function App() {
+export default function App() {
   return (
     <div className="App">
         <Router>
           <Navbar />
-          <div className="container main">
             <Routes>
               <Route exact path="/" component={Home} />
               <Route path="/create" component={Create} />
@@ -31,11 +30,10 @@ function App() {
               <Route path="/fill/:id" component={Fill} />
               <Route path="/submissions/:id" component={Submissions} />
             </Routes>
-          </div>
+          
         </Router>
         <Footer />
     </div>
   );
 }
-
-export default App;
+//<div className="container main"></div>
