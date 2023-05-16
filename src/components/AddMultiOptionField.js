@@ -41,7 +41,7 @@ function AddMultiOptionField({ inputType, add, close }){
             </div>
             { options.length > 0 && (
                 <div className="mb-1">
-                    <p className="b">Options</p>
+                    <p className="b text-white">Options</p>
                     { options.map((opt, index) => (
                         <div className="input inline mb-0" key={index}>
                             <input type={inputType === "Singlechoice-MCQ" ? "radio" : "checkbox"} className="mr-1" name="inputs" />
