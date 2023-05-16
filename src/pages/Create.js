@@ -41,6 +41,9 @@ function Create(){
         setFormModel(_model)
     }
 
+    const removeFormField=field=>{
+        console.log(field)
+    }
     const inputTypes = ["Textfield", "Description", "number", "Singlechoice-MCQ", "Multiplechoice-MCQ", "file"]
 
     const createForm = async () => {
@@ -75,7 +78,7 @@ function Create(){
                     <input type="text" placeholder="What is the survey about" onChange={e => updateObjState(setFormModel, formModel ,"title", e.target.value)} />
                 </div>
 
-                {formModel.fields.length > 0 && <RenderPlainForm model={formModel} remove={setFormModel} />}
+                {formModel.fields.length > 0 && <RenderPlainForm model={formModel} remove={removeFormField} />}
 
                 <div className="input">
                     <label>ThankYou note</label>
