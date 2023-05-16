@@ -7,7 +7,7 @@ function RenderPlainForm({ model , remove }){
                     <div key={index} className="input">
                         <label>{field.title}{field.required && <span className="err">*</span>}</label>
                         <input type={field.type} />
-                        <button className="btn" onClick={()=>{remove(field)}}>remove</button>
+                        <button className="btn" onClick={()=>{remove(index)}}>remove</button>
                     </div>
                 )
                 : field.type === "Description" ? 

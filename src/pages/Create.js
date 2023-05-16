@@ -41,8 +41,12 @@ function Create(){
         setFormModel(_model)
     }
 
-    const removeFormField=field=>{
-        console.log(field)
+    const removeFormField=index=>{
+        //console.log(field)
+        let _model = Object.assign({}, formModel)
+        _model.fields.splice(index , 1)
+        setFormModel(_model)
+
     }
     const inputTypes = ["Textfield", "Description", "number", "Singlechoice-MCQ", "Multiplechoice-MCQ", "file"]
 
