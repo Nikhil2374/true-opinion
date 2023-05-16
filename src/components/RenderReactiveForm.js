@@ -38,12 +38,12 @@ function RenderReactiveForm({ model, onSubmitted }){
             { fillableModel.map((field, index) => ["Textfield", "number"].indexOf(field.type) > -1
             ? (
                 <div key={index} className="input">
-                    <label>{field.title}{field.required && <span className="err">*</span>}</label>
+                    <label className='text-white'>{field.title}{field.required && <span className="err">*</span>}</label>
                     <input type={field.type === "number" ? "number" : "text"} onChange={e => updateArrOfObjState(setFillableModel, fillableModel, index, "value", e.target.value)} />
                 </div>
             ) : field.type === "Description" ? (
                 <div key={index} className="input">
-                    <label>{field.title}{field.required && <span className="err">*</span>}</label>
+                    <label className='text-white'>{field.title}{field.required && <span className="err">*</span>}</label>
                     <textarea onChange={e => updateArrOfObjState(setFillableModel, fillableModel, index, "value", e.target.value)}></textarea>
                 </div>
             ) : field.type === "Singlechoice-MCQ" || field.type === "Multiplechoice-MCQ" ? (
