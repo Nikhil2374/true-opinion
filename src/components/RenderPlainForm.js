@@ -1,4 +1,7 @@
 function RenderPlainForm({ model , remove }){
+    function handleClick(field){
+        console.log(field)
+    }
     return (
         <div className="survey-container mb-1 text-white">
             <h1 className="mb-1 text-white">Preview</h1>
@@ -7,7 +10,7 @@ function RenderPlainForm({ model , remove }){
                     <div key={index} className="input">
                         <label>{field.title}{field.required && <span className="err">*</span>}</label>
                         <input type={field.type} />
-                        <button className="btn" onClick={remove(field)}>remove</button>
+                        <button className="btn" onClick={handleClick(field)}>remove</button>
                     </div>
                 )
                 : field.type === "Description" ? 
@@ -15,7 +18,7 @@ function RenderPlainForm({ model , remove }){
                     <div key={index} className="input">
                         <label>{field.title}{field.required && <span className="err">*</span>}</label>
                         <textarea></textarea>
-                        <button className="btn" onClick={remove(index)}>remove</button>
+                        <button className="btn" onClick={handleClick(field)}>remove</button>
                     </div>
                 )
                 : field.type === "file" ? 
@@ -23,7 +26,7 @@ function RenderPlainForm({ model , remove }){
                     <div key={index} className="input">
                         <label>{field.title}{field.required && <span className="err">*</span>}</label>
                         <input type="file" />
-                        <button className="btn" onClick={remove(index)}>remove</button>
+                        <button className="btn" onClick={handleClick(field)}>remove</button>
                     </div>
                 )
                 : field.type === "Singlechoice-MCQ" || field.type === "Multiplechoice-MCQ" ? 
@@ -36,14 +39,15 @@ function RenderPlainForm({ model , remove }){
                                 <label>{option}</label>
                             </div>
                         )) }
-                        <button className="btn" onClick={remove(index)}>remove</button>
+                        <button className="btn" onClick={handleClick(field)}>remove</button>
                     </div>
                 )
                 : <p key={index}>Unknown field type.</p>
             )}
-            <button className="btn mt-1">submit</button>
+            
         </div>
     )
 }
 
 export default RenderPlainForm
+//<button className="btn mt-1">submit</button>
