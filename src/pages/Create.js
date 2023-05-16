@@ -59,7 +59,7 @@ function Create(){
 
         if(formModel.expiration.trim() && formModel.expiration < 1) return setErr("Validity should be at least an hour")
 
-        if(formModel.fields.length < 2) return setErr("You need to add at least one field")
+        if(formModel.fields.length < 1) return setErr("You need to add at least one field")
 
         setLoading(true)
         try{

@@ -202,7 +202,14 @@ label.btn{
 .add-field-container .btn{
   margin: 0 0.5em 0.5em 0;
 }
-
+.btn-remove{
+  padding: 5px;
+  background-color: #ff0000a8;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: white;
+}
 
 .input{
   margin-bottom: 1.5em;
