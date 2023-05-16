@@ -20,7 +20,7 @@ function Login(){
         if(!validateEmail(email)) return setErr("Email is not valid")
 
         if(!pwd.trim()) return setErr("Password is required")
-        if(pwd.trim().length < 6 || pwd.trim().length > 20) return setErr("Password should be 6 - 20 characters long")
+        if(pwd.trim().length < 8 || pwd.trim().length > 20) return setErr("Password should be 6 - 20 characters long")
         
         setLoading(true) 
 

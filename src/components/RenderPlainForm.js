@@ -1,4 +1,4 @@
-function RenderPlainForm({ model }){
+function RenderPlainForm({ model , remove }){
     return (
         <div className="survey-container mb-1 text-white">
             <h1 className="mb-1 text-white">Preview</h1>
@@ -7,6 +7,7 @@ function RenderPlainForm({ model }){
                     <div key={index} className="input">
                         <label>{field.title}{field.required && <span className="err">*</span>}</label>
                         <input type={field.type} />
+                        <button className="btn" onClick={remove(index)}>remove</button>
                     </div>
                 )
                 : field.type === "Description" ? 
@@ -14,6 +15,7 @@ function RenderPlainForm({ model }){
                     <div key={index} className="input">
                         <label>{field.title}{field.required && <span className="err">*</span>}</label>
                         <textarea></textarea>
+                        <button className="btn" onClick={remove(index)}>remove</button>
                     </div>
                 )
                 : field.type === "file" ? 
@@ -21,6 +23,7 @@ function RenderPlainForm({ model }){
                     <div key={index} className="input">
                         <label>{field.title}{field.required && <span className="err">*</span>}</label>
                         <input type="file" />
+                        <button className="btn" onClick={remove(index)}>remove</button>
                     </div>
                 )
                 : field.type === "Singlechoice-MCQ" || field.type === "Multiplechoice-MCQ" ? 
@@ -33,6 +36,7 @@ function RenderPlainForm({ model }){
                                 <label>{option}</label>
                             </div>
                         )) }
+                        <button className="btn" onClick={remove(index)}>remove</button>
                     </div>
                 )
                 : <p key={index}>Unknown field type.</p>
