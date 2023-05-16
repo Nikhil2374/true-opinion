@@ -1,6 +1,6 @@
 function SubmissionCard({ submission }){
     return (
-        <div className="card">
+        <div className="card text-white">
             {submission.map((subm, index) => (
                 <div className="input">
                     <label>{subm.title}</label>
