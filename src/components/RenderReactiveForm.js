@@ -34,7 +34,7 @@ function RenderReactiveForm({ model, onSubmitted }){
     }
 
     return (
-        <div className="main-form mt-1">
+        <div className="main-form mt-1 text-white">
             { fillableModel.map((field, index) => ["Textfield", "number"].indexOf(field.type) > -1
             ? (
                 <div key={index} className="input">
