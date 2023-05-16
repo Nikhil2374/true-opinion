@@ -2,10 +2,10 @@ import { useState} from 'react'
 import { Link } from 'react-router-dom'
 
 import { getDateFromMillis } from '../utils'
-import { deleteForm, submitForm } from "../db"
+import { deleteForm } from "../db"
 
-import RenderReactiveForm from "../components/RenderPlainForm"
-
+//import RenderPlainForm from "../components/RenderPlainForm"
+import Fill from '../pages/Fill'
 function FormCard({ form, onDelete }){
     const [preview, setPreview] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -17,6 +17,7 @@ function FormCard({ form, onDelete }){
         setLoading(false)
         onDelete(form.id)
     }
+    //<RenderPlainForm model={form} />
     return (
         <div className="card">
             <h2 className="title mb-1">
@@ -33,7 +34,7 @@ function FormCard({ form, onDelete }){
                 <div className="modal">
                     <div className="modal-content preview">
                         <span className="close" onClick={() => setPreview(false)}>&times;</span>
-                        <RenderReactiveForm model={form} />
+                        <Fill/>
                     </div>
                 </div>
             )}
