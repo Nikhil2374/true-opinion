@@ -10,7 +10,21 @@ export default function Edit(){
     const [inputType, setInputType] = useState("text")
     const [err, setErr] = useState("")
     const [loading, setLoading] = useState(false)
-    const [formModel, setFormModel]=useState({})
+
+    const [formModel, setFormModel] = useState({
+        title: "",
+        createdAt: +(new Date()),
+        fields: [
+            {
+                title: "Enter your email",
+                type: "Textfield",
+                required: true
+            }
+        ],
+        endMessage: "",
+        expiration: ""
+    })
+
 
     const navigate = useNavigate()
     const openAddModal = inputType => {
@@ -23,6 +37,7 @@ export default function Edit(){
         if(!localStorage.getItem('gfc-user')) return
         const fetchData = async () => {
             try{
+                console;e.log(id)
                 let frms = await getForm({ id })
                 console.log(frms)
                 setFormModel(frms)
@@ -80,7 +95,7 @@ export default function Edit(){
                     <input type="text" placeholder="What is the survey about" onChange={e => updateObjState(setFormModel, formModel ,"title", e.target.value)} />
                 </div>
 
-                 <RenderPlainForm model={formModel} remove={removeFormField} />
+                {formModel.fields.length > 0 &&<RenderPlainForm model={formModel} remove={removeFormField} />}
 
                 <div className="input">
                     <label>ThankYou note</label>
