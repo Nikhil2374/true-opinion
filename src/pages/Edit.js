@@ -37,7 +37,7 @@ export default function Edit(){
         if(!localStorage.getItem('gfc-user')) return
         const fetchData = async () => {
             try{
-                console;e.log(id)
+                console.log(id)
                 let frms = await getForm({ id })
                 console.log(frms)
                 setFormModel(frms)
