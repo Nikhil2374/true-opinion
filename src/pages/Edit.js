@@ -80,7 +80,7 @@ export default function Edit(){
                     <input type="text" placeholder="What is the survey about" onChange={e => updateObjState(setFormModel, formModel ,"title", e.target.value)} />
                 </div>
 
-                {formModel.fields.length > 0 && <RenderPlainForm model={formModel} remove={removeFormField} />}
+                 <RenderPlainForm model={formModel} remove={removeFormField} />
 
                 <div className="input">
                     <label>ThankYou note</label>
