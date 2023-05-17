@@ -15,6 +15,7 @@ import Signup from "./pages/Signup"
 import Forms from "./pages/Forms"
 import Fill from "./pages/Fill"
 import Submissions from "./pages/Submissions"
+import Edit from "./pages/Edit"
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
               <Route path="/forms" element={<Forms/>} />
               <Route path="/fill/:id" element={<Fill/>} />
               <Route path="/submissions/:id" element={<Submissions/>} />
+              <Route path="/edit/:id" element={<Edit/>}/>
             </Routes>
           </div>
         </Router>

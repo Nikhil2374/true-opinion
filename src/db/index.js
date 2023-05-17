@@ -38,6 +38,11 @@ export const getForm = async ops => {
     return doc
 }
 
+export const editForm=async (formModel, id)=>{
+    const user = JSON.parse(localStorage.getItem("gfc-user"))
+    return firestore.collection("forms").doc(id).update({...formModel, uid:user.id})
+}
+
 export const deleteForm = async formId => {
     let submissions = await firestore.collection("submissions").where("formId", "==", formId).get()
     submissions = submissions.docs

@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 
-import { getForms } from "../db"
+import { getForms} from "../db"
 import FormCard from "../components/FormCard"
 
 export default function Forms(){
     const [forms, setForms] = useState([])
     const [msg, setMsg] = useState('')
     const [loading, setLoading] = useState(true)
-
     useEffect(() => {
         if(!localStorage.getItem('gfc-user')) return
         const fetchData = async () => {

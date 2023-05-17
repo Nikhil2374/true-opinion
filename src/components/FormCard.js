@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { getDateFromMillis } from '../utils'
 import { deleteForm } from "../db"
 
-//import RenderPlainForm from "../components/RenderPlainForm"
 import Fill from '../pages/Fill'
 function FormCard({ form, onDelete }){
     const [preview, setPreview] = useState(false)
@@ -17,7 +16,7 @@ function FormCard({ form, onDelete }){
         setLoading(false)
         onDelete(form.id)
     }
-    //<RenderPlainForm model={form} />
+
     return (
         <div className="card">
             <h2 className="title mb-1">
@@ -29,6 +28,7 @@ function FormCard({ form, onDelete }){
                 <span className="nav-item" onClick={() => setPreview(true)}>preview</span>
                 <Link to={"/submissions/" + form.id} className="nav-item">submissions</Link>
                 <span className="nav-item" onClick={handleDelete}>{ loading ? <span className="spinner red"></span> : <span>delete</span>}</span>
+                <Link to={"/edit" + form.id} className="nav-item">edit</Link>
             </p>
             {preview && (
                 <div className="modal">
