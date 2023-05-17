@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from "react-router-dom"
 import AddFieldModal from "../components/AddFieldModal"
 import RenderPlainForm from "../components/RenderPlainForm"
@@ -23,12 +23,10 @@ export default function Edit(){
         const fetchData = async () => {
             try{
                 let frms = await getForm(id)
-                
                 setFormModel(frms)
                 setLoading(false)
             }catch(e){
                 setLoading(false)
-                setMsg(e.message)
             }
         }
         fetchData()
