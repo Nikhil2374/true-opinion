@@ -29,9 +29,9 @@ export default function App() {
               <Route path="/login" element={<Login/>} />
               <Route path="/signup" element={<Signup/>} />
               <Route path="/forms" element={<Forms/>} />
+              <Route path="/edit/:id" element={<Edit/>}/>
               <Route path="/fill/:id" element={<Fill/>} />
               <Route path="/submissions/:id" element={<Submissions/>} />
-              <Route path="/edit/:id" element={<Edit/>}/>
             </Routes>
           </div>
         </Router>

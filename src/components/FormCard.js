@@ -28,7 +28,7 @@ function FormCard({ form, onDelete }){
                 <span className="nav-item" onClick={() => setPreview(true)}>preview</span>
                 <Link to={"/submissions/" + form.id} className="nav-item">submissions</Link>
                 <span className="nav-item" onClick={handleDelete}>{ loading ? <span className="spinner red"></span> : <span>delete</span>}</span>
-                <Link to={"/edit" + form.id} className="nav-item">edit</Link>
+                <Link to={"/edit/" + form.id} className="nav-item">edit</Link>
             </p>
             {preview && (
                 <div className="modal">
