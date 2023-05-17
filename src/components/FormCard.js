@@ -2,7 +2,7 @@ import { useState} from 'react'
 import { Link } from 'react-router-dom'
 
 import { getDateFromMillis } from '../utils'
-import { deleteForm } from "../db"
+import { deleteForm,useAuthenticated } from "../db"
 
 import Fill from '../pages/Fill'
 function FormCard({ form, onDelete }){
@@ -16,6 +16,9 @@ function FormCard({ form, onDelete }){
         setLoading(false)
         onDelete(form.id)
     }
+
+    const user=useAuthenticated()
+    console.log(user)
 
     return (
         <div className="card">
