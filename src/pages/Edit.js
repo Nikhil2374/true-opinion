@@ -31,7 +31,7 @@ export default function Edit(){
             }
         }
         fetchData()
-    }, [setFormModel])
+    }, [setFormModel, setLoading])
 
     const addFieldToFormModel = field => {
         let _model = Object.assign({}, formModel)
