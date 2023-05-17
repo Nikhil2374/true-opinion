@@ -24,6 +24,7 @@ export default function Edit(){
         const fetchData = async () => {
             try{
                 let frms = await getForm({ id })
+                console.log(frms)
                 setFormModel(frms)
                 setLoading(false)
             }catch(e){
