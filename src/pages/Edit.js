@@ -11,18 +11,19 @@ export default function Edit(){
     const [err, setErr] = useState("")
     const [loading, setLoading] = useState(false)
     const [formModel, setFormModel]=useState({})
-    const {id}= useParams()
+
     const navigate = useNavigate()
     const openAddModal = inputType => {
         setShowAddModal(true)
         setInputType(inputType)
     }
 
+    const { id }= useParams()
     useEffect(() => {
         if(!localStorage.getItem('gfc-user')) return
         const fetchData = async () => {
             try{
-                let frms = await getForm({ formID: id })
+                let frms = await getForm(id)
                 setFormModel(frms)
                 setLoading(false)
             }catch(e){
@@ -30,7 +31,7 @@ export default function Edit(){
             }
         }
         fetchData()
-    }, [])
+    }, [setFormModel])
 
     const addFieldToFormModel = field => {
         let _model = Object.assign({}, formModel)
@@ -59,7 +60,7 @@ export default function Edit(){
         if(formModel.fields.length < 1) return setErr("You need to add at least one field")
         setLoading(true)
         try{
-            await saveForm(formModel,id)
+            await saveForm(formModel, id)
             setLoading(false)
             navigate("/forms")
         }catch(e){
