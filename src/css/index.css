@@ -1,7 +1,7 @@
 :root{
   --primary-color: #0d6efd;
   --clr-red: #ee0014;
-  background-image: url(../assets/bg.jpg);
+  background-image: url(../assets/bg.png);
   background-size: cover;
 }
 *{
@@ -21,7 +21,7 @@ a{
   outline: none;
   padding: 1em 2em;
   border-radius: 5px;
-  background-color: #0d6efd;
+  background-color: #f3c05a;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
