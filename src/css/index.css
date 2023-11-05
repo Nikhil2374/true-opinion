@@ -285,7 +285,7 @@ input.file{
 }
 .card-nav .nav-item{
   margin-left: 0.5em;
-  background-color: rgba(5, 104, 252, 0.1);
+  background-color: rgb(5, 104, 252);
   color: rgba(5, 104, 252, 1);
   padding: 0.5em 1em;
   display: inline-block;
@@ -293,11 +293,11 @@ input.file{
   cursor: pointer;
 }
 .card-nav .nav-item:nth-child(2){
-  background-color: rgba(0, 243, 32, 0.1);
+  background-color: rgb(0, 243, 32);
   color: rgb(0, 165, 22);
 }
 .card-nav .nav-item:nth-child(3){
-  background-color: rgba(243, 0, 0, 0.1);
+  background-color: rgb(243, 0, 0);
   color: rgba(243, 0, 0, 1);
 }
 
