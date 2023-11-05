@@ -1,7 +1,7 @@
 :root{
   --primary-color: #0d6efd;
   --clr-red: #ee0014;
-  background-image: url(../assets/bg.png);
+  background-image: url(../assets/bg.jpg);
   background-size: cover;
 }
 *{
