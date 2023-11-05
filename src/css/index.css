@@ -286,7 +286,7 @@ input.file{
 .card-nav .nav-item{
   margin-left: 0.5em;
   background-color: rgb(5, 104, 252);
-  color: rgba(5, 104, 252, 1);
+  color: rgb(255, 255, 255);
   padding: 0.5em 1em;
   display: inline-block;
   border-radius: 3px;
@@ -294,11 +294,11 @@ input.file{
 }
 .card-nav .nav-item:nth-child(2){
   background-color: rgb(0, 243, 32);
-  color: rgb(0, 165, 22);
+  color: rgb(255, 255, 255);
 }
 .card-nav .nav-item:nth-child(3){
   background-color: rgb(243, 0, 0);
-  color: rgba(243, 0, 0, 1);
+  color: rgb(255, 255, 255);
 }
 
 .msg{
