@@ -10,7 +10,7 @@ function FormCard({ form, onDelete }){
     const [loading, setLoading] = useState(false)
 
     const handleDelete = async () => {
-        if(!window.confirm("Are you sure you want to delete this Survey?")) return
+        if(!window.confirm("Are you sure you want to delete this Quiz?")) return
         setLoading(true)
         await deleteForm(form.id)
         setLoading(false)

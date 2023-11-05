@@ -6,7 +6,7 @@ export default function Footer(){
             <div>
             </div>
             <div>
-                <a href="/" className="title mr-1">TrueOpinion</a>
+                <a href="/" className="title mr-1">Online Quiz Platform</a>
                 <small>&copy; {new Date().getFullYear()}</small>
             </div>
         </div>

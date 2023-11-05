@@ -24,12 +24,12 @@ function Navbar(){
 
     return (
         <div className="navbar container">
-            <a href="/" className="brand">TrueOpinion</a>
+            <a href="/" className="brand">Online Quiz Platform</a>
             <nav className="nav">
                 { user ? (
                     <span>
-                        <Link to="/forms">Available Surveys</Link>
-                        <Link to="/create">Create Survey</Link>
+                        <Link to="/forms">Available Quiz</Link>
+                        <Link to="/create">Create Quiz</Link>
                         <span onClick={logout}>Logout</span>
                     </span>
                 ) : (

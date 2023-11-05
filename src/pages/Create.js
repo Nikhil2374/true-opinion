@@ -74,12 +74,12 @@ function Create(){
 
     return (
         <div>
-            <h1 className="heading">Create New Survey</h1>
+            <h1 className="heading">Create New Quiz</h1>
             
             <div className="form sign-up-form">
                 <div className="input">
                     <label>Title</label>
-                    <input type="text" placeholder="What is the survey about" onChange={e => updateObjState(setFormModel, formModel ,"title", e.target.value)} />
+                    <input type="text" placeholder="What is the Quiz about" onChange={e => updateObjState(setFormModel, formModel ,"title", e.target.value)} />
                 </div>
 
                 {formModel.fields.length > 0 && <RenderPlainForm model={formModel} remove={removeFormField} />}
@@ -90,8 +90,8 @@ function Create(){
                 </div>
 
                 <div className="input">
-                    <label>Survey period</label>
-                    <input type="number" placeholder="Time duration of survey in hours" onKeyDown={e => {if(e.key==='.' || e.key==='-'){e.preventDefault()}}} onChange={e => updateObjState(setFormModel, formModel ,"expiration", e.target.value)} />
+                    <label>Quiz period</label>
+                    <input type="number" placeholder="Time duration of Quiz in hours" onKeyDown={e => {if(e.key==='.' || e.key==='-'){e.preventDefault()}}} onChange={e => updateObjState(setFormModel, formModel ,"expiration", e.target.value)} />
                 </div>
             </div>
 
